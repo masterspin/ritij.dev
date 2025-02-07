@@ -52,6 +52,7 @@ export default function ProjectsPage() {
       description:
         "Addressed issues related to post-navigation statistics caching and unresponsive URLs, ensuring a smoother user experience. Contributed two accepted pull requests incorporated into version 23.8 of WordPress iOS, available on the App Store. Implemented a comprehensive Quality Assurance strategy, incorporating unit and regression testing, mocking, and style checks to thoroughly assess modifications and resolve issues while maintaining existing functionalities.",
       tags: ["Git", "Swift"],
+      githubUrl: "https://github.com/wordpress-mobile/WordPress-iOS/pull/22061",
     },
   ];
 
