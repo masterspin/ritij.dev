@@ -21,7 +21,7 @@ export function SpotifyIcon(props: SVGProps<SVGSVGElement> & { url: string }) {
 }
 
 export function BrixNStonesIcon(
-  props: ReactsImgHTMLAttributes<HTMLImageElement> & { url: string },
+  props: React.ImgHTMLAttributes<HTMLImageElement> & { url: string },
 ) {
   const imgStyle: CSSProperties = {
     width: "100%",
