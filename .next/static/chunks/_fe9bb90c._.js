@@ -397,8 +397,7 @@ const Experience = ()=>{
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(CompanyLogo, {
                                     url: company.site,
                                     logoPath: company.logoPath,
-                                    size: company.size,
-                                    invertOnDark: company.invertOnDark
+                                    size: company.size
                                 }, void 0, false, {
                                     fileName: "[project]/components/Experience.tsx",
                                     lineNumber: 95,
@@ -418,7 +417,7 @@ const Experience = ()=>{
                                         children: company.name
                                     }, void 0, false, {
                                         fileName: "[project]/components/Experience.tsx",
-                                        lineNumber: 103,
+                                        lineNumber: 102,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -426,13 +425,13 @@ const Experience = ()=>{
                                         children: company.position
                                     }, void 0, false, {
                                         fileName: "[project]/components/Experience.tsx",
-                                        lineNumber: 110,
+                                        lineNumber: 109,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/Experience.tsx",
-                                lineNumber: 102,
+                                lineNumber: 101,
                                 columnNumber: 13
                             }, this)
                         ]

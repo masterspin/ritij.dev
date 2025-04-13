@@ -96,7 +96,6 @@ const Experience = () => {
                 url={company.site}
                 logoPath={company.logoPath}
                 size={company.size}
-                invertOnDark={company.invertOnDark}
               />
             </div>
             <div>
