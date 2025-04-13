@@ -1,6 +1,4 @@
 import Section from "./Section";
-import TopArtists from "../spotify/TopArtists";
-import TopTracks from "../spotify/TopTracks";
 import Projects from "../Projects";
 
 type SectionProps = {

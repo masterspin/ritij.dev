@@ -1,6 +1,5 @@
 import Section from "./Section";
 import Experience from "../Experience";
-import AboutMe from "../AboutMe";
 
 type SectionProps = {
   className?: string;
