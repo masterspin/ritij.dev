@@ -135,7 +135,7 @@ export default function Header() {
   return (
     <div className="relative w-full">
       <motion.header
-        className="fixed top-0 left-0 right-0 z-50 mx-auto backdrop-blur-lg"
+        className="fixed top-0 left-0 right-0 z-50 mx-auto backdrop-blur-xs"
         initial={false}
         animate={{
           paddingLeft: isScrolled ? "1rem" : "1.5rem",

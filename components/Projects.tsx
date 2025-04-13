@@ -70,7 +70,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <div id="projects" className="flex flex-col items-center mt-8">
+    <div className="flex flex-col items-center mt-8">
       <h2 className="text-4xl sm:text-5xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-6xl font-header">
         Projects
       </h2>
