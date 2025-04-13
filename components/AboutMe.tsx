@@ -24,10 +24,7 @@ const AboutMe = () => {
 
       <div className="mt-2 w-95 sm:w-120 md:w-70 lg:w-100 2xl:lg:w-120 text-sm sm:text-base md:text-base lg:text-xl">
         <SlideFadeIn direction={direction} inMargin="-100px" outMargin="-80px">
-          <p>
-            I&apos;m a software engineer & music producer based in Ann Arbor,
-            MI.
-          </p>
+          <p>I&apos;m a software engineer based in Novi, MI.</p>
         </SlideFadeIn>
         <SlideFadeIn direction={direction} inMargin="-100px" outMargin="-80px">
           <p>
