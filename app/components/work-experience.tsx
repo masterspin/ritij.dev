@@ -1,9 +1,24 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { BrixNStonesIcon } from "./icons";
 import { SiFord } from "react-icons/si";
+import { FaMicrosoft } from "react-icons/fa";
 
 export function WorkExperience() {
   const experiences = [
+    {
+      logo: (
+        <a
+          href="https://microsoft.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaMicrosoft className="h-12 w-12" />
+        </a>
+      ),
+      company: "Microsoft",
+      team: "",
+      title: "Incoming Software Engineering Intern",
+    },
     {
       logo: (
         <a href="https://ford.com/" target="_blank" rel="noopener noreferrer">
