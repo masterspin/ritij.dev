@@ -65,7 +65,7 @@ const companies = [
   },
   {
     name: "The Brix N Stones Studio - Site Management Team",
-    site: "https://www.sw.siemens.com/en-US/",
+    site: "https://brixnstones.in/",
     logoPath: "/company-logos/BrixNStonesLogo.jpeg",
     position: "Full-stack Developer",
     size: "size-12 sm:size-16 md:size-20",
