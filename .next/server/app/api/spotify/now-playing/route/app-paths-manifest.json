@@ -1,0 +1,3 @@
+{
+  "/api/spotify/now-playing/route": "app/api/spotify/now-playing/route.js"
+}

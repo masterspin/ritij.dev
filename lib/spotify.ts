@@ -1,39 +1,57 @@
-import axios from 'axios';
+import querystring from "querystring";
 
-export const refreshAccessToken = async (refreshToken: string) => {
-    const clientId = process.env.SPOTIFY_CLIENT_ID;
-    const clientSecret = process.env.SPOTIFY_CLIENT_SECRET;
-  
-    if (!clientId || !clientSecret) {
-      throw new Error('Server Error: Spotify environment variables not set');
-    }
-  
-    const response = await axios.post('https://accounts.spotify.com/api/token', new URLSearchParams({
-      grant_type: 'refresh_token',
-      refresh_token: refreshToken,
-      client_id: clientId,
-      client_secret: clientSecret,
-    }), {
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-      },
-    });
-  
-    return response.data.access_token;
-  }
+const client_id = process.env.SPOTIFY_CLIENT_ID;
+const client_secret = process.env.SPOTIFY_CLIENT_SECRET;
+const refresh_token = process.env.SPOTIFY_REFRESH_TOKEN;
 
-export const getCurrentlyPlayingTrack = async (accessToken: string) => {
-  const response = await axios.get('https://api.spotify.com/v1/me/player/currently-playing', {
+const basic = Buffer.from(`${client_id}:${client_secret}`).toString("base64");
+const TOKEN_ENDPOINT = `https://accounts.spotify.com/api/token`;
+const NOW_PLAYING_ENDPOINT = `https://api.spotify.com/v1/me/player/currently-playing`;
+const TOP_TRACKS_ENDPOINT = `https://api.spotify.com/v1/me/top/tracks?time_range=medium_term&limit=10`;
+const TOP_ARTISTS_ENDPOINT = `https://api.spotify.com/v1/me/top/artists?time_range=medium_term&limit=10`;
+
+const getAccessToken = async () => {
+  const response = await fetch(TOKEN_ENDPOINT, {
+    method: "POST",
     headers: {
-      Authorization: `Bearer ${accessToken}`,
+      Authorization: `Basic ${basic}`,
+      "Content-Type": "application/x-www-form-urlencoded",
     },
+    body: querystring.stringify({
+      grant_type: "refresh_token",
+      refresh_token,
+    }),
   });
 
-  if (response.status === 204 || response.status > 400) {
-    return null;
-  }
-
-  return response.data;
+  return response.json();
 };
 
-export default refreshAccessToken;
+export const getNowPlaying = async () => {
+  const { access_token } = await getAccessToken();
+
+  return fetch(NOW_PLAYING_ENDPOINT, {
+    headers: {
+      Authorization: `Bearer ${access_token}`,
+    },
+  });
+};
+
+export const getTopTracks = async () => {
+  const { access_token } = await getAccessToken();
+
+  return fetch(TOP_TRACKS_ENDPOINT, {
+    headers: {
+      Authorization: `Bearer ${access_token}`,
+    },
+  });
+};
+
+export const getTopArtists = async () => {
+  const { access_token } = await getAccessToken();
+
+  return fetch(TOP_ARTISTS_ENDPOINT, {
+    headers: {
+      Authorization: `Bearer ${access_token}`,
+    },
+  });
+};

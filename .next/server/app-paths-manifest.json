@@ -1,0 +1,8 @@
+{
+  "/page": "app/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/api/spotify/top-tracks/route": "app/api/spotify/top-tracks/route.js",
+  "/api/spotify/top-artists/route": "app/api/spotify/top-artists/route.js",
+  "/api/spotify/now-playing/route": "app/api/spotify/now-playing/route.js",
+  "/_not-found/page": "app/_not-found/page.js"
+}

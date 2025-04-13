@@ -1,0 +1,3 @@
+{
+  "/api/spotify/top-tracks/route": "app/api/spotify/top-tracks/route.js"
+}

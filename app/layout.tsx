@@ -1,26 +1,46 @@
-import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import { ThemeProvider } from "./theme-provider";
-import type React from "react"; // Added import for React
+import { ThemeProvider } from "next-themes";
+import { JetBrains_Mono, Instrument_Serif } from "next/font/google";
+import "./globals.css";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
+  subsets: ["latin"],
+});
+const instrumentSerif = Instrument_Serif({
+  variable: "--font-instrument-serif",
+  subsets: ["latin"],
+  weight: "400",
+});
+
+const fonts = [jetbrainsMono.variable, instrumentSerif.variable];
+const fontVariables = fonts.join(" ");
 
 export const metadata: Metadata = {
   title: "Ritij Jutur",
-  description: "Personal Website",
+  description: "Built by Ritij",
 };
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+    <html lang="en" className="no-scrollbar" suppressHydrationWarning>
+      {/* <head>
+        <script
+          crossOrigin="anonymous"
+          src="//unpkg.com/react-scan/dist/auto.global.js"
+        />
+      </head> */}
+      <body className={`${fontVariables} antialiased bg-background`}>
+        <ThemeProvider enableSystem={true} disableTransitionOnChange={true}>
+          <Header />
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
