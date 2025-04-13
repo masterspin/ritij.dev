@@ -5,10 +5,15 @@ type SectionProps = {
   className?: string;
 };
 
-const Section = ({ className = "", children }: SectionProps) => {
+const Section = ({
+  className = "",
+  children,
+  id = "",
+}: SectionProps & { id?: string }) => {
   return (
     <div
-      className={`min-h-screen flex flex-col justify-center items-center sticky top-0 bg-background ${className}`}
+      id={id}
+      className={`min-h-screen flex flex-col justify-center items-center bg-background ${className}`}
     >
       {children}
     </div>

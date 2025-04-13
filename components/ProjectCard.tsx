@@ -14,7 +14,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   links,
 }) => {
   return (
-    <div className="p-4 border rounded-md shadow-sm bg-white dark:bg-gray-800">
+    <div className="p-4 border rounded-md shadow-sm bg-white dark:bg-gray-800 h-full flex flex-col justify-between">
       <h3 className="text-xl font-semibold mb-2">{name}</h3>
       <p className="text-sm text-gray-700 dark:text-gray-300 mb-2">
         {description}

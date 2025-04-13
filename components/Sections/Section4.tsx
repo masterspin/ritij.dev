@@ -1,19 +1,19 @@
 import Section from "./Section";
-import Projects from "../Projects";
+import Clones from "../Clones";
 
 type SectionProps = {
   className?: string;
 };
 
-const Section3 = ({ className = "" }: SectionProps) => {
+const Section4 = ({ className = "" }: SectionProps) => {
   return (
     <>
-      <Section className={`${className} border-t mb-16`}>
+      <Section id="clones" className={`${className} border-t`}>
         <div
-          id="projects"
+          id="clones"
           className="flex flex-col w-full md:flex-row justify-center gap-y-16"
         >
-          <Projects />
+          <Clones />
         </div>
       </Section>
 
@@ -29,4 +29,4 @@ const Section3 = ({ className = "" }: SectionProps) => {
   );
 };
 
-export default Section3;
+export default Section4;

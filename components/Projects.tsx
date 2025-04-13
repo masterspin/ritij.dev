@@ -70,11 +70,11 @@ const projects = [
 
 const Projects = () => {
   return (
-    <div className="flex flex-col items-center mt-8 pb-16">
+    <div id="projects" className="flex flex-col items-center mt-8">
       <h2 className="text-4xl sm:text-5xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-6xl font-header">
         Projects
       </h2>
-      <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-5xl px-4">
+      <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-6 h-full w-full max-w-5xl px-4">
         {projects.map((project) => (
           <SlideFadeIn key={project.name}>
             <ProjectCard

@@ -10,13 +10,14 @@ __turbopack_context__.s({
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 ;
-const Section = ({ className = "", children })=>{
+const Section = ({ className = "", children, id = "" })=>{
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: `min-h-screen flex flex-col justify-center items-center sticky top-0 bg-background ${className}`,
+        id: id,
+        className: `min-h-screen flex flex-col justify-center items-center bg-background ${className}`,
         children: children
     }, void 0, false, {
         fileName: "[project]/components/Sections/Section.tsx",
-        lineNumber: 10,
+        lineNumber: 14,
         columnNumber: 5
     }, this);
 };
@@ -237,7 +238,7 @@ const Section1 = ({ className = "" })=>{
                 className: "text-xs sm:text-base md:text-lg lg:text-xl xl:text-2xl flex gap-x-3",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$SlideFadeIn$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SlideFadeIn"], {
                     slideOffset: 20,
-                    children: "Software Engineer"
+                    children: "Software Engineer."
                 }, void 0, false, {
                     fileName: "[project]/components/Sections/Section1.tsx",
                     lineNumber: 20,
@@ -344,111 +345,173 @@ _s1(CompanyLogo, "I0Qsc3s8DM2sJg7Lbr8wvKXvz6o=", false, function() {
     ];
 });
 _c = CompanyLogo;
-// Company Data
+// Company Data with added timeline information
 const companies = [
     {
         name: "Microsoft",
         site: "https://www.microsoft.com",
         logoPath: "/company-logos/microsoft-logo.svg",
         position: "Incoming Software Engineering Intern",
-        size: "size-6 sm:size-8 md:size-12"
+        size: "size-6 sm:size-8 md:size-12",
+        period: "May - August 2025",
+        isCurrent: true
     },
     {
         name: "Ford Motor Company – High Performance Computing Team",
         site: "https://www.ford.com",
         logoPath: "/company-logos/ford-logo.svg",
         position: "Systems Software Engineering Intern",
-        size: "size-14 sm:size-18 md:size-24"
+        size: "size-14 sm:size-18 md:size-24",
+        period: "May - August 2024"
     },
     {
         name: "The Brix N Stones Studio - Site Management Team",
-        site: "https://www.sw.siemens.com/en-US/",
+        site: "https://brixnstones.in/",
         logoPath: "/company-logos/BrixNStonesLogo.jpeg",
         position: "Full-stack Developer",
-        size: "size-12 sm:size-16 md:size-20"
+        size: "size-12 sm:size-16 md:size-20",
+        period: "January - April 2024"
     },
     {
         name: "Ford Motor Company – Cloud Platform Team",
         site: "https://www.ford.com",
         logoPath: "/company-logos/ford-logo.svg",
         position: "Systems Software Engineering Intern",
-        size: "size-14 sm:size-18 md:size-24"
+        size: "size-14 sm:size-18 md:size-24",
+        period: "May - August 2023"
     }
 ];
 const Experience = ()=>{
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "flex flex-col items-center",
+        id: "experience",
+        className: "flex flex-col items-center w-full",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                className: "text-4xl sm:text-5xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-6xl font-header",
+                className: "text-4xl sm:text-5xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-6xl font-header mb-8",
                 children: "Experience"
             }, void 0, false, {
                 fileName: "[project]/components/Experience.tsx",
-                lineNumber: 86,
+                lineNumber: 90,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "mt-2 md:mt-1",
-                children: companies.map((company)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$SlideFadeIn$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SlideFadeIn"], {
-                        className: "flex items-center gap-x-2",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: `flex-shrink-0 size-12 sm:size-14 md:size-18 flex items-center justify-center`,
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(CompanyLogo, {
-                                    url: company.site,
-                                    logoPath: company.logoPath,
-                                    size: company.size
+                className: "relative w-full max-w-3xl",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-gray-300 dark:bg-gray-700"
+                    }, void 0, false, {
+                        fileName: "[project]/components/Experience.tsx",
+                        lineNumber: 96,
+                        columnNumber: 9
+                    }, this),
+                    companies.map((company, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$SlideFadeIn$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SlideFadeIn"], {
+                            className: "relative mb-12 md:mb-16",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: `absolute left-8 md:left-1/2 top-6 transform -translate-x-1/2 w-4 h-4 rounded-full z-10 border-4 border-background ${company.isCurrent ? "bg-primary" : "bg-muted-foreground"}`
                                 }, void 0, false, {
                                     fileName: "[project]/components/Experience.tsx",
-                                    lineNumber: 95,
-                                    columnNumber: 15
+                                    lineNumber: 101,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: `ml-16 md:ml-0 md:grid md:grid-cols-2 md:gap-8 ${index % 2 === 0 ? "" : "md:flex md:flex-col-reverse"}`,
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: `mb-2 md:mb-0 ${index % 2 === 0 ? "md:text-right md:pr-8" : "md:pl-8 md:col-start-2"}`
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/Experience.tsx",
+                                            lineNumber: 113,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: `${index % 2 === 0 ? "md:pl-8 md:col-start-2" : "md:text-right md:pr-8 md:col-start-1 md:row-start-1"}`,
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: `flex items-center gap-4 ${index % 2 !== 0 ? "md:flex-row-reverse" : ""}`,
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        className: "flex-shrink-0",
+                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(CompanyLogo, {
+                                                            url: company.site,
+                                                            logoPath: company.logoPath,
+                                                            size: company.size
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/components/Experience.tsx",
+                                                            lineNumber: 135,
+                                                            columnNumber: 21
+                                                        }, this)
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/components/Experience.tsx",
+                                                        lineNumber: 134,
+                                                        columnNumber: 19
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        children: [
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                                                className: "font-semibold underline-fade text-base sm:text-xl md:text-xl xl:text-2xl break-words hover:underline",
+                                                                href: company.site,
+                                                                target: "_blank",
+                                                                children: company.name
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/components/Experience.tsx",
+                                                                lineNumber: 143,
+                                                                columnNumber: 21
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                                                className: "text-xs sm:text-base md:text-sm xl:text-base text-muted",
+                                                                children: company.position
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/components/Experience.tsx",
+                                                                lineNumber: 150,
+                                                                columnNumber: 21
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                className: "inline-block px-3 py-1 text-sm font-medium rounded-full bg-secondary/10 text-muted-foreground",
+                                                                children: company.period
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/components/Experience.tsx",
+                                                                lineNumber: 153,
+                                                                columnNumber: 21
+                                                            }, this)
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "[project]/components/Experience.tsx",
+                                                        lineNumber: 142,
+                                                        columnNumber: 19
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/components/Experience.tsx",
+                                                lineNumber: 129,
+                                                columnNumber: 17
+                                            }, this)
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/Experience.tsx",
+                                            lineNumber: 122,
+                                            columnNumber: 15
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/components/Experience.tsx",
+                                    lineNumber: 107,
+                                    columnNumber: 13
                                 }, this)
-                            }, void 0, false, {
-                                fileName: "[project]/components/Experience.tsx",
-                                lineNumber: 92,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                        className: "font-semibold underline-fade text-base sm:text-xl md:text-xl xl:text-2xl break-words hover:underline",
-                                        href: company.site,
-                                        target: "_blank",
-                                        children: company.name
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/Experience.tsx",
-                                        lineNumber: 102,
-                                        columnNumber: 15
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                        className: "text-xs sm:text-base md:text-sm xl:text-base text-muted",
-                                        children: company.position
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/Experience.tsx",
-                                        lineNumber: 109,
-                                        columnNumber: 15
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/components/Experience.tsx",
-                                lineNumber: 101,
-                                columnNumber: 13
-                            }, this)
-                        ]
-                    }, company.name, true, {
-                        fileName: "[project]/components/Experience.tsx",
-                        lineNumber: 91,
-                        columnNumber: 11
-                    }, this))
-            }, void 0, false, {
+                            ]
+                        }, company.name, true, {
+                            fileName: "[project]/components/Experience.tsx",
+                            lineNumber: 99,
+                            columnNumber: 11
+                        }, this))
+                ]
+            }, void 0, true, {
                 fileName: "[project]/components/Experience.tsx",
-                lineNumber: 89,
+                lineNumber: 94,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/Experience.tsx",
-        lineNumber: 85,
+        lineNumber: 89,
         columnNumber: 5
     }, this);
 };

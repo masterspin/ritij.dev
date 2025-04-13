@@ -17,7 +17,7 @@ const Section1 = ({ className = "" }: SectionProps) => {
       </h1>
 
       <div className="text-xs sm:text-base md:text-lg lg:text-xl xl:text-2xl flex gap-x-3">
-        <SlideFadeIn slideOffset={20}>Software Engineer</SlideFadeIn>
+        <SlideFadeIn slideOffset={20}>Software Engineer.</SlideFadeIn>
       </div>
       <SocialLinks />
     </Section>
