@@ -98,33 +98,78 @@ const Experience = () => {
   return (
     <div
       id="experience"
-      className="flex flex-col items-center w-full mt-16 mb-20"
+      className="flex flex-col items-center w-full mt-16 mb-20 px-4"
     >
-      <h2 className="text-4xl sm:text-5xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-6xl font-header mb-12">
-        Experience
-      </h2>
+      <h2 className="text-4xl sm:text-5xl font-header mb-12">Experience</h2>
 
-      <div className="relative w-full max-w-6xl px-4">
-        {/* Timeline line */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-0.5 bg-gray-300 dark:bg-gray-700"></div>
+      {/* 📱 Mobile View */}
+      <div className="flex flex-col gap-6 sm:hidden w-full">
+        {companies.map((company) => (
+          <div
+            key={company.name + company.period}
+            className="p-4 bg-card/50 backdrop-blur-sm rounded-lg border bg-white dark:bg-gray-800 shadow-sm"
+          >
+            <div className="flex items-center gap-4 mb-3">
+              <CompanyLogo
+                url={company.site}
+                logoPath={company.logoPath}
+                size="w-12 h-12"
+                invertOnDark={false}
+              />
+              <div>
+                <h3 className="text-lg font-semibold">{company.name}</h3>
+                <p className="text-sm text-muted-foreground">
+                  {company.position}
+                </p>
+                <div className="mt-1">
+                  <span className="inline-block px-3 py-1 rounded-full bg-secondary/10 text-xs text-muted-foreground">
+                    {company.period}
+                  </span>
+                </div>
+              </div>
+            </div>
+            {company.team && (
+              <h4 className="font-medium text-sm mb-1">{company.team}</h4>
+            )}
+            {company.description ? (
+              <ul className="text-sm text-muted-foreground list-disc pl-5 space-y-1">
+                {company.description
+                  .split("\n")
+                  .map(
+                    (line, i) => line.trim() && <li key={i}>{line.trim()}</li>
+                  )}
+              </ul>
+            ) : (
+              <p className="text-sm text-muted-foreground italic">
+                {company.isCurrent
+                  ? "Upcoming position"
+                  : "Details coming soon"}
+              </p>
+            )}
+          </div>
+        ))}
+      </div>
+
+      {/* 🖥 Desktop Timeline View */}
+      <div className="hidden sm:block relative w-full max-w-6xl">
+        {/* Timeline Line */}
+        <div className="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-0.5 bg-gray-300 dark:bg-gray-700" />
 
         {companies.map((company) => (
           <SlideFadeIn
             key={company.name + company.period}
             className="relative mb-16 flex items-center"
           >
-            {/* Left card - Company info */}
+            {/* Left card */}
             <div className="w-1/2 pr-8 flex justify-end">
               <div className="w-full md:w-[320px] p-4 md:p-6 bg-card/50 backdrop-blur-sm rounded-lg hover:shadow-md transition-all duration-300 h-full flex flex-col justify-between">
                 <div className="flex items-center gap-4">
-                  <div className="flex-shrink-0">
-                    <CompanyLogo
-                      url={company.site}
-                      logoPath={company.logoPath}
-                      size={company.size}
-                      invertOnDark={false}
-                    />
-                  </div>
+                  <CompanyLogo
+                    url={company.site}
+                    logoPath={company.logoPath}
+                    size={company.size}
+                    invertOnDark={false}
+                  />
                   <div className="flex-grow min-w-0">
                     <h3 className="font-semibold text-base sm:text-xl break-words">
                       {company.name}
@@ -142,16 +187,16 @@ const Experience = () => {
               </div>
             </div>
 
-            {/* Timeline dot */}
+            {/* Timeline Dot */}
             <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center z-10">
               <div className="w-4 h-4 bg-background border-2 border-gray-300 dark:border-gray-600 rounded-full shadow-sm">
                 {company.isCurrent && (
-                  <div className="absolute -inset-1 animate-ping rounded-full bg-blue-500/60"></div>
+                  <div className="absolute -inset-1 animate-ping rounded-full bg-blue-500/60" />
                 )}
               </div>
             </div>
 
-            {/* Right card - Team and Description */}
+            {/* Right card */}
             <div className="w-1/2 pl-8 flex items-start">
               <div className="w-full p-4 md:p-6 bg-card/50 backdrop-blur-sm rounded-lg hover:shadow-md transition-all duration-300">
                 {company.team && (
