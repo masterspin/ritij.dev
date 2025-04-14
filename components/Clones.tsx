@@ -18,7 +18,7 @@ const Clones = () => {
         Clones
       </h2>
       <p className="mt-2 text-center text-lg text-muted-foreground px-4">
-        Websites inspired by me.
+        Websites inspired by this one.
       </p>
       <ul className="mt-6 w-full max-w-3xl px-4 space-y-6">
         {clones.map((clone) => (

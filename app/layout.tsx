@@ -21,6 +21,11 @@ const fontVariables = fonts.join(" ");
 export const metadata: Metadata = {
   title: "Ritij Jutur",
   description: "Built by Ritij",
+  icons: {
+    icon: "/apple-icon.png",
+    // You can also specify different sizes if needed
+    apple: "/apple-icon.png",
+  },
 };
 
 export default function RootLayout({

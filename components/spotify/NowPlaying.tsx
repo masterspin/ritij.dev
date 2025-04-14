@@ -3,7 +3,7 @@
 
 import { useNowPlaying } from "@/lib/hooks/useSpotify";
 import SongDisplay from "@/components/spotify/SongDisplay";
-// import { BsSpotify } from "react-icons/bs";
+import { BsSpotify } from "react-icons/bs";
 import { SkeletonSongDisplay } from "./Skeletons";
 import { useResponsiveMaxWidth } from "@/lib/hooks/useResponsiveWidth";
 
@@ -27,8 +27,8 @@ const NowPlayingContent = ({
   if (!isPlaying) {
     return (
       <div className="flex items-center space-x-4">
-        {/* <BsSpotify className="text-3xl" /> */}
-        {/* <p className="text-md">Not currently playing</p> */}
+        <BsSpotify className="text-3xl" />
+        <p className="text-md">Not currently playing</p>
       </div>
     );
   }

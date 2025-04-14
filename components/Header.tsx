@@ -18,8 +18,10 @@ import ThemeSwitcher from "./ThemeSwitcher";
 
 // Define sections to track
 const SECTIONS = [
+  { id: "/", label: "/" },
   { id: "experience", label: "experience" },
   { id: "projects", label: "projects" },
+  { id: "education", label: "education" },
   { id: "clones", label: "clones" },
 ];
 
@@ -124,7 +126,7 @@ export default function Header() {
 
   // Generate header text based on current section
   const headerText =
-    isScrolled && currentSection ? (
+    isScrolled && currentSection && currentSection !== "/" ? (
       <span>
         RJ/<span className="font-thin">{currentSection}</span>
       </span>

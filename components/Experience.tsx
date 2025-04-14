@@ -51,110 +51,130 @@ const CompanyLogo = ({
 const companies = [
   {
     name: "Microsoft",
+    team: "",
     site: "https://www.microsoft.com",
     logoPath: "/company-logos/microsoft-logo.svg",
-    position: "Incoming Software Engineering Intern",
+    position: "Software Engineer Intern",
     size: "size-6 sm:size-8 md:size-12",
     period: "May - August 2025",
+    description: "",
     isCurrent: true,
   },
   {
-    name: "Ford Motor Company – High Performance Computing Team",
+    name: "Ford Motor Company",
+    team: "High Performance Computing Team",
     site: "https://www.ford.com",
     logoPath: "/company-logos/ford-logo.svg",
-    position: "Systems Software Engineering Intern",
+    position: "Software Engineer Intern",
     size: "size-14 sm:size-18 md:size-24",
+    description:
+      "Optimized APIs to support computationally intensive workloads within a distributed system\nRevamped APIs to support JSON input\nDecommissioned the use of safe shell for safety and security\nIntegration tests with code coverage\nBlue/green deployments",
     period: "May - August 2024",
   },
   {
-    name: "The Brix N Stones Studio - Site Management Team",
+    name: "The Brix N Stones Studio",
+    team: "Site Management Team",
     site: "https://brixnstones.in/",
     logoPath: "/company-logos/BrixNStonesLogo.jpeg",
     position: "Full-stack Developer",
     size: "size-12 sm:size-16 md:size-20",
-    period: "January - April 2024",
+    description: "UX\nSEO\nAdmin Interface\nIntegrated email forms",
+    period: "July - August 2023",
   },
   {
-    name: "Ford Motor Company – Cloud Platform Team",
+    name: "Ford Motor Company",
+    team: "Cloud Platform Team",
     site: "https://www.ford.com",
     logoPath: "/company-logos/ford-logo.svg",
-    position: "Systems Software Engineering Intern",
+    position: "Software Engineer Intern",
     size: "size-14 sm:size-18 md:size-24",
+    description:
+      'Reverse engineering tooling built on an open-source service to improve project comprehension\nVisualized Terraform’s interactions with GCP given a GitHub repository\nIntegrated containerized API services with backstage.io\n"Most Viable Award" for Innovation Challenge\n"Future Mobility Achiever" for City of Tomorrow Challenge',
     period: "May - August 2023",
   },
 ];
 
 const Experience = () => {
   return (
-    <div className="flex flex-col items-center w-full mt-8 mb-8">
-      <h2 className="text-4xl sm:text-5xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-6xl font-header mb-8">
+    <div
+      id="experience"
+      className="flex flex-col items-center w-full mt-16 mb-20"
+    >
+      <h2 className="text-4xl sm:text-5xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-6xl font-header mb-12">
         Experience
       </h2>
 
-      <div className="relative w-full max-w-3xl">
-        {/* Timeline vertical line */}
-        <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-gray-300 dark:bg-gray-700"></div>
+      <div className="relative w-full max-w-6xl px-4">
+        {/* Timeline line */}
+        <div className="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-0.5 bg-gray-300 dark:bg-gray-700"></div>
 
-        {companies.map((company, index) => (
-          <SlideFadeIn key={company.name} className="relative mb-12 md:mb-16">
-            {/* Timeline dot */}
-            <div
-              className={`absolute left-8 md:left-1/2 top-6 transform -translate-x-1/2 w-4 h-4 rounded-full z-10 border-4 border-background ${
-                company.isCurrent ? "bg-primary" : "bg-muted-foreground"
-              }`}
-            ></div>
-
-            <div
-              className={`ml-16 md:ml-0 md:grid md:grid-cols-2 md:gap-8 ${
-                index % 2 === 0 ? "" : "md:flex md:flex-col-reverse"
-              }`}
-            >
-              {/* Date badge */}
-              <div
-                className={`mb-2 md:mb-0 ${
-                  index % 2 === 0
-                    ? "md:text-right md:pr-8"
-                    : "md:pl-8 md:col-start-2"
-                }`}
-              ></div>
-
-              {/* Company details */}
-              <div
-                className={`${
-                  index % 2 === 0
-                    ? "md:pl-8 md:col-start-2"
-                    : "md:text-right md:pr-8 md:col-start-1 md:row-start-1"
-                }`}
-              >
-                <div
-                  className={`flex items-center gap-4 ${
-                    index % 2 !== 0 ? "md:flex-row-reverse" : ""
-                  }`}
-                >
+        {companies.map((company) => (
+          <SlideFadeIn
+            key={company.name + company.period}
+            className="relative mb-16 flex items-center"
+          >
+            {/* Left card - Company info */}
+            <div className="w-1/2 pr-8 flex justify-end">
+              <div className="w-full md:w-[320px] p-4 md:p-6 bg-card/50 backdrop-blur-sm rounded-lg hover:shadow-md transition-all duration-300 h-full flex flex-col justify-between">
+                <div className="flex items-center gap-4">
                   <div className="flex-shrink-0">
                     <CompanyLogo
                       url={company.site}
                       logoPath={company.logoPath}
                       size={company.size}
-                      // invertOnDark={true}
+                      invertOnDark={false}
                     />
                   </div>
-                  <div>
-                    <a
-                      className="font-semibold underline-fade text-base sm:text-xl md:text-xl xl:text-2xl break-words hover:underline"
-                      href={company.site}
-                      target="_blank"
-                    >
+                  <div className="flex-grow min-w-0">
+                    <h3 className="font-semibold text-base sm:text-xl break-words">
                       {company.name}
-                    </a>
-                    <h3 className="text-xs sm:text-base md:text-sm xl:text-base text-muted">
-                      {company.position}
                     </h3>
-                    <span className="inline-block px-3 py-1 text-sm font-medium rounded-full bg-secondary/10 text-muted-foreground">
-                      {company.period}
-                    </span>
+                    <p className="text-xs sm:text-sm text-muted-foreground">
+                      {company.position}
+                    </p>
+                    <div className="mt-1">
+                      <span className="inline-block px-3 py-1 rounded-full bg-secondary/10 text-xs text-muted-foreground">
+                        {company.period}
+                      </span>
+                    </div>
                   </div>
                 </div>
+              </div>
+            </div>
+
+            {/* Timeline dot */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center z-10">
+              <div className="w-4 h-4 bg-background border-2 border-gray-300 dark:border-gray-600 rounded-full shadow-sm">
+                {company.isCurrent && (
+                  <div className="absolute -inset-1 animate-ping rounded-full bg-blue-500/60"></div>
+                )}
+              </div>
+            </div>
+
+            {/* Right card - Team and Description */}
+            <div className="w-1/2 pl-8 flex items-start">
+              <div className="w-full p-4 md:p-6 bg-card/50 backdrop-blur-sm rounded-lg hover:shadow-md transition-all duration-300">
+                {company.team && (
+                  <h4 className="font-medium mb-2 text-sm sm:text-base">
+                    {company.team}
+                  </h4>
+                )}
+                {company.description ? (
+                  <ul className="text-sm text-muted-foreground leading-relaxed list-disc pl-5 space-y-1">
+                    {company.description
+                      .split("\n")
+                      .map(
+                        (line, index) =>
+                          line.trim() && <li key={index}>{line.trim()}</li>
+                      )}
+                  </ul>
+                ) : (
+                  <p className="text-sm text-muted-foreground italic">
+                    {company.isCurrent
+                      ? "Upcoming position"
+                      : "Details coming soon"}
+                  </p>
+                )}
               </div>
             </div>
           </SlideFadeIn>

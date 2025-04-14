@@ -8,21 +8,28 @@ const projects = [
     description:
       "An AR-based mobile game inspired by Pokémon GO, enabling users to plant and grow virtual trees at real-world landmarks.",
     technologies: ["Unity", "C#", "JIRA"],
-    links: [{ label: "Video", url: "https://www.youtube.com/watch?v=example" }],
+    links: [
+      { label: "Video", url: "https://www.youtube.com/watch?v=CvlVSmJB3rs" },
+    ],
   },
   {
     name: "ritij.tech",
     description:
       "A platform for scraping and managing internship and co-op listings for the 2024-2025 school year.",
     technologies: ["Next.js", "Supabase", "BeautifulSoup"],
-    links: [{ label: "Website", url: "https://www.ritij.tech" }],
+    links: [{ label: "Website", url: "https://www.ritij.tech/" }],
   },
   {
     name: "Barterville",
     description:
       "A game where users negotiate trades with AI characters, starting with lower-value items and aiming for higher-value trades.",
     technologies: ["Next.js", "Python"],
-    links: [{ label: "Website", url: "https://ai.google.dev" }],
+    links: [
+      {
+        label: "Website",
+        url: "https://ai.google.dev/competition/projects/barterville",
+      },
+    ],
   },
   {
     name: "Image Background Swapper",
@@ -32,7 +39,7 @@ const projects = [
     links: [
       {
         label: "GitHub",
-        url: "https://github.com/ritij/image-background-swapper",
+        url: "https://github.com/masterspin/BackgroundSwapping",
       },
     ],
   },
@@ -42,7 +49,7 @@ const projects = [
       "A utility application offering insights and analytics about your iMessage usage over the past year.",
     technologies: ["PyTorch", "Flask", "Python", "Next.js"],
     links: [
-      { label: "GitHub", url: "https://github.com/ritij/imessage-wrapped" },
+      { label: "GitHub", url: "https://github.com/masterspin/iMessageWrapped" },
     ],
   },
   {
@@ -51,7 +58,10 @@ const projects = [
       "A disease prediction model employing machine learning to analyze data and predict diseases early.",
     technologies: ["Flask", "Pandas", "Next.js", "Numpy"],
     links: [
-      { label: "GitHub", url: "https://github.com/ritij/disease-predictor" },
+      {
+        label: "GitHub",
+        url: "https://github.com/masterspin/DiseasePredictor",
+      },
     ],
   },
   {
@@ -62,7 +72,7 @@ const projects = [
     links: [
       {
         label: "GitHub",
-        url: "https://github.com/ritij/wordpress-ios-contributions",
+        url: "https://github.com/wordpress-mobile/WordPress-iOS/pull/22061",
       },
     ],
   },
@@ -74,7 +84,7 @@ const Projects = () => {
       <h2 className="text-4xl sm:text-5xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-6xl font-header">
         Projects
       </h2>
-      <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-6 h-full w-full max-w-5xl px-4">
+      <div className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-6 h-full w-full max-w-5xl px-4">
         {projects.map((project) => (
           <SlideFadeIn key={project.name}>
             <ProjectCard

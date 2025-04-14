@@ -10,7 +10,7 @@ type SectionProps = {
 
 const Section1 = ({ className = "" }: SectionProps) => {
   return (
-    <Section className={className}>
+    <Section id="/" className={className}>
       <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-9xl font-bold font-header tracking-[.1rem] flex gap-x-2 md:gap-x-3 xl:gap-x-4">
         <SlideFadeIn delay={0.06}>Ritij</SlideFadeIn>
         <SlideFadeIn delay={0.0}>Jutur</SlideFadeIn>

@@ -9,14 +9,14 @@ const socials = [
     link: "https://github.com/masterspin",
   },
   {
-    name: "Email",
-    icon: Mail,
-    link: "mailto:rjutur@umich.edu",
-  },
-  {
     name: "LinkedIn",
     icon: Linkedin,
     link: "https://www.linkedin.com/in/rjutur/",
+  },
+  {
+    name: "Email",
+    icon: Mail,
+    link: "mailto:rjutur@umich.edu",
   },
 ];
 
