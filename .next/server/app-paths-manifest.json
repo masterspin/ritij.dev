@@ -1,7 +1,5 @@
 {
   "/page": "app/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/api/spotify/now-playing/route": "app/api/spotify/now-playing/route.js",
-  "/_not-found/page": "app/_not-found/page.js",
-  "/apple-icon.png/route": "app/apple-icon.png/route.js"
+  "/api/spotify/now-playing/route": "app/api/spotify/now-playing/route.js"
 }
